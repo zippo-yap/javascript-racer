@@ -13,23 +13,30 @@ var player = game.querySelectorAll('.players'); //tracks all players
 var player1 = document.querySelector('.one').children
 var player2 = document.querySelector('.two').children
 
- var i = 0; 
+ var i = 0; // Player 1 Position
+ var j = 0; // Player 2 Position
 
-function updatePlayerPosition (){
-if (player1[i].className == "active") {
-  player1[i].className = "";
-  player1[i].nextElementSibling.className = "active";
-  i++;
-} // <------- Close Loop
+
+
+ function updatePlayerPosition (event){
+  if (event.which == 90){
+    if (player1[i].className == "active") {
+      player1[i].className = "";
+      player1[i].nextElementSibling.className = "active";
+      i++;
+    }
+  } // <--- Close first if
+  if (event.which == 77){
+    if(player1[i].className == "active"){ 
+      player2[j].className = "";
+      player2[j].nextElementSibling.className = "active";
+      j++;
+    }
+  }
 } // <-------Close function
-var j = 0;
 
-function updatePlayerPosition2 (){
-if (player2[j].className == "active") {
-  player2[j].className = "";
-  player2[j].nextElementSibling.className = "active";
-  j++;
-} // <------- Close Loop
-} // <-------Close function
+document.addEventListener('keyup', updatePlayerPosition)
 
-  document.addEventListener('keyup', updatePlayerPosition)
+
+// Z = 90
+//M = 77
