@@ -16,30 +16,20 @@ var player2 = document.querySelector('.two').children
  var i = 0; 
 
 function updatePlayerPosition (){
- // Loop through the array
-
- // select element with class "active"
- // select next sibling
-
-if (player1[i].className = "active") {
+if (player1[i].className == "active") {
   player1[i].className = "";
   player1[i].nextElementSibling.className = "active";
   i++;
-  // set class = active 
 } // <------- Close Loop
 } // <-------Close function
 var j = 0;
 
 function updatePlayerPosition2 (){
- // Loop through the array
-
- // select element with class "active"
- // select next sibling
-if (player2[j].className = "active") {
+if (player2[j].className == "active") {
   player2[j].className = "";
   player2[j].nextElementSibling.className = "active";
   j++;
-  // set class = active 
 } // <------- Close Loop
 } // <-------Close function
 
+  document.addEventListener('keyup', updatePlayerPosition)
