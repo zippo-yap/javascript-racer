@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to Update player position
   function updatePlayerPosition (player) {
-    for (var i = 0; i < player.length; i++) {
-      if (player[i].className === 'active' && player[i].nextElementSibling !== null) {
+    for (var i = 0; i < player.length -1; i++) {
+      // if position on board is last position
+      if (player[i].className === 'active') {
         player[i].className = '';
         player[i].nextElementSibling.className = 'active';
-        break
+        break;
       }
     }
   }
@@ -28,4 +29,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 })
-
