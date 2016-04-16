@@ -17,17 +17,16 @@ var player2 = document.querySelector('.two').children
  var j = 0; // Player 2 Position
 
 
-
- function updatePlayerPosition (event){
+ function updatePlayerPosition (event,player){
   if (event.which == 90){
-    if (player1[i].className == "active") {
+    if (player1[i].className === "active" && player1[i].nextElementSibling !== null) {
       player1[i].className = "";
       player1[i].nextElementSibling.className = "active";
       i++;
     }
   } // <--- Close first if
   if (event.which == 77){
-    if(player1[i].className == "active"){ 
+    if(player2[j].className == "active" && player2[j].nextElementSibling !== null){ 
       player2[j].className = "";
       player2[j].nextElementSibling.className = "active";
       j++;
@@ -39,4 +38,7 @@ document.addEventListener('keyup', updatePlayerPosition)
 
 
 // Z = 90
-//M = 77
+// M = 77
+
+var p1keys = 90;
+var p2keys = 77;
