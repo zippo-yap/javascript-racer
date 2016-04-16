@@ -24,8 +24,13 @@ function updatePlayerPosition(player) {
   }
 } // <-------Close function
 
-document.addEventListener('keyup', updatePlayerPosition)
+document.addEventListener('keyup', keysPressed)
 
-
-// Z = 90
-// M = 77
+function keysPressed(event){
+  if (event.which == 90){ // M
+    updatePlayerPosition(player1)
+  }
+  else if (event.which == 77){ //Z
+    updatePlayerPosition(player2)
+  }
+}
