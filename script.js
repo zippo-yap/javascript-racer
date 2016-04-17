@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+//var player = game.querySelectorAll('.players'); //tracks all players
+
   // Reset the game
   function reset () {
     for (var i = 0; i < player1.length; i++){
@@ -56,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.removeEventListener('keyup', keysPressed);
           // Call a function that resets the game
           endGame();
+        
         }
         else {
              break;
