@@ -12,8 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
       // if position on board is last position
       if (player[i].className === 'active') {
         player[i].className = '';
+        if (player[i].nextElementSibling === player[player.length -1]){
+          player[i].nextElementSibling.className = 'active';
+          console.log ("last")
+        }
+        else{
         player[i].nextElementSibling.className = 'active';
         break;
+        }
       }
     }
   }
