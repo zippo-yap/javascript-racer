@@ -21,14 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (playAgain){
       console.log("Play Again");
       // Call function to reset game
-      reset();
+    //document.location.reload(); <--- this refreshes the page but I'm thinking of not using it so I can create a score board.
+     reset();
     }
     else {
-      console.log('Nope')
+      console.log('Nope') // Work in progress
     }
   }
-
-//var player = game.querySelectorAll('.players'); //tracks all players
 
   // Reset the game
   function reset () {
