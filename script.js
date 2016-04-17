@@ -9,16 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to Update player position
   function updatePlayerPosition (player) {
     for (var i = 0; i < player.length -1; i++) {
-      // if position on board is last position
       if (player[i].className === 'active') {
         player[i].className = '';
-        if (player[i].nextElementSibling === player[player.length -1]){
-          player[i].nextElementSibling.className = 'active';
-          console.log ("last")
-        }
-        else{
         player[i].nextElementSibling.className = 'active';
-        break;
+        if (player[i].nextElementSibling === player[player.length -1]) {
+          alert ("Winner Winner Winner") // Insert Finish function or alert
+        }
+        else {
+             break;
         }
       }
     }
