@@ -1,5 +1,3 @@
-// Run the code after the page has loaded
-document.addEventListener('DOMContentLoaded', function () {
 
   // Create an array of the tracks for each player.
   var player1 = document.querySelector('.one').children;
@@ -44,27 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
     play();
   }
 
-  play();
-
-
   // Function to Update player position
-  function updatePlayerPosition (player) {
-    for (var i = 0; i < player.length -1; i++) {
-      if (player[i].className === 'active') {
-        player[i].className = '';
-        player[i].nextElementSibling.className = 'active';
-        if (player[i].nextElementSibling === player[player.length -1]) {
-          document.removeEventListener('keyup', keysPressed);
-          // Call a function that resets the game
-          endGame();
-        
-        }
-        else {
-             break;
-        }
+function updatePlayerPosition (player) {
+  for (var i = 0; i < player.length -1; i++) {
+    if (player[i].className === 'active') {
+      player[i].className = '';
+      player[i].nextElementSibling.className = 'active';
+      if (player[i].nextElementSibling === player[player.length -1]) {
+        document.removeEventListener('keyup', keysPressed);
+        // Call a function that resets the game
+        endGame();
       }
     }
   }
+}
 
   function keysPressed (event) {
     // When M is pressed
@@ -76,4 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
       updatePlayerPosition(player2);
     } //Close keysPressed
   } // Close event listener
+
+// Run the code after the page has loaded
+document.addEventListener('DOMContentLoaded', function () {
+  play();
 }) // Close document loader
