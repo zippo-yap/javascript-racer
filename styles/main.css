@@ -22,13 +22,13 @@ header {
 }
 
 #player1_strip .active{
-  background-image: url("../images/Unicorn1.png");
+  background-image: url("../images/Unicorn4.png");
   background-size:100% 100%;
   -webkit-background-size:100% 100%;        /*  Safari  */
   -moz-background-size:100% 100%;           /*  Firefox  */
 }
 #player2_strip .active{
-  background-image: url("../images/Unicorn3.png");
+  background-image: url("../images/Unicorn2.png");
   background-size:100% 100%;
   -webkit-background-size:100% 100%;        /*  Safari  */
   -moz-background-size:100% 100%;           /*  Firefox  */
@@ -46,3 +46,4 @@ footer a{
 a:hover {
  text-decoration: underline;
 }
+
