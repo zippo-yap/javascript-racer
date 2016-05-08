@@ -3,39 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Javascript Racer</title>
+  <title>Unicorn Racer Game</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
   
 </head>
 <body>
-  <h1>Javascript Racer</h1>
 
-  <p> Player 1: Use 'Z' </p>
-  <p> Player 2: Use 'M' </p>
+  <div class="container">
 
-  <div class="game">
-    <div class="players one">
-      <div class="active"></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div><!---End playerOneGrid -->
-    <div class="players two">
-      <div class="active"></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div><!---End playerTwoGrid -->
-  </div>
+    <header>
+      <img src="images/Unicorn_Banner.png" alt="Unicorn Racer Game">    
+    </header>
 
+    <table class="racer_table">
+     <tr id="player1_strip">
+       <td class="active"></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr id="player2_strip">
+       <td class="active"></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+   </table>
 
-  <script type ="text/javascript" src="script.js"></script>
+   <footer>
+    <a href="http://zippo-yap.github.io/">Code by OHMYCODENESS ❤</a>
+    <a href="http://www.freepik.com">Graphics designed by Freepik</a>
+  </footer>
+
+</div>
+<script type ="text/javascript" src="script.js"></script>
 </body>
 </html>
